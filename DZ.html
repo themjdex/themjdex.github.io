@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate CSS</title>
+    <link rel="stylesheet" id="theme" href="white.css">
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <h1>css generators</h1>
+        <label for="">
+            Enable dark theme?
+            <input type="checkbox" class="theme-checkbox">
+          </label>
+    </div>
+    <form action="" id="border-rad">
+        <h1>border-radius generator</h1>
+        <div class="border-box-inner">
+            <div class="item">
+                <label for="top_left">top-left</label>
+                <input type="range" class="boxrad" id="top_left" min="0" max="75" step="1" value="75">
+        
+                <label for="bottom_left">bottom-left</label>
+                <input type="range" class="boxrad" id="bottom_left" min="0" max="75" step="1" value="0">
+            </div>
+            
+            <div class="item">
+                <div class="preview-border-rad" id="border_result"></div>
+            </div>
+            
+            <div class="item">
+                <label for="top_right">top-right</label>
+                <input type="range" class="boxrad" id="top_right" min="0" max="75" step="1" value="0">
+    
+                <label for="bottom_right">bottom-right</label>
+                <input type="range" class="boxrad" id="bottom_right" min="0" max="75" step="1" value="0">
+            </div>
+        </div>
+        
+        
+        <h3>Результат</h3>
+        <textarea id="border_radius_result" readonly></textarea>
+    </form>
+
+    <form action="" id="text-shad">
+        <h1>text-shadow generator</h1>
+
+        <div id="text-shad-result"><p id="test">Test Text</p></div>
+
+        <label for="offsetShadowX">Смещение по оси X</label>
+        <input type="range" id="offsetShadowX" min="-15" max="15" step="1" value="1">
+
+        <label for="offsetShadowY">Смещение по оси Y</label>
+        <input type="range" id="offsetShadowY" min="-15" max="15" step="1" value="-2">
+
+        <label for="colorShadow">Цвет</label>
+        <input type="color" id="colorShadow"><br>
+
+        <label for="opacityShadow">Прозрачность</label>
+        <input type="range" id="opacityShadow" min="0" max="1" step="0.01" value="1">
+
+        <h3>Результат</h3>
+        <textarea id="text-shadow-result" readonly></textarea>
+    </form>
+
+    <form>
+        <h1>Box-shadow Generator</h1>
+        <div class="preview-box-shadow" id="box-shadow-result"></div>
+        <div class="form-group">
+          <label for="inset">Тень внутри элемента?</label>
+          <input type="checkbox" id="inset" checked>
+        </div>
+    
+        <label for="offsetX">Смещение по оси x</label>
+        <input type="range" id="offsetX" min="-25" max="25" step="1" value="0">
+        
+        <label for="offsetY">Смещение по оси y</label>
+        <input type="range" id="offsetY" min="-25" max="25" step="1" value="0">
+        
+        <label for="blur">Размытие</label>
+        <input type="range" id="blur" min="0" max="25" step="1" value="8">
+        
+        <label for="stretch">Растяжение</label>
+        <input type="range" id="stretch" min="-20" max="20" step="1" value="6">
+        
+        <label for="color">Цвет</label>
+        <input type="color" id="color"><br>
+        
+        <label for="opacity">Прозрачность</label>
+        <input type="range" id="opacity" min="0" max="1" step="0.01" value="0.5">
+        
+        <h3>Результат</h3>
+        
+        <textarea id="box-shadow-css-result" readonly></textarea>
+      </form>
+
+      <form class="trian-generator">
+        <h1>Triangle Generator</h1>
+        <label for="trian-size">Размер</label>
+        <input type="range" id="trian-size" min="0" max="60" step="1" value="60">
+
+        <label for="color">Цвет</label>
+        <input type="color" id="color1" value="#00d9ff"><br>
+
+        <table>
+            <tr>
+                <td>
+                    <label for="trian_top_left">top-left</label>
+                    <input type="radio" name="triangle" id="trian_top_left" value="top-left"></td>
+                <td>
+                    <label for="trian_top">top</label>
+                    <input type="radio" name="triangle" id="trian_top" value="top">
+                </td>
+                <td>
+                    <label for="trian_top_right">top-right</label>
+                    <input type="radio" name="triangle" id="trian_top_right" value="top-right">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="trian_left">left</label>
+                    <input type="radio" name="triangle" id="trian_left" value="left">
+                </td>
+                <td>
+                    <div  class="preview-trian" id="trian-result"></div>
+                </td>
+                <td>
+                    <label for="trian_right">right</label>
+                    <input type="radio" name="triangle" id="trian_right" value="right">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="trian_bottom_left">bottom-left</label>
+                    <input type="radio" name="triangle" id="trian-bottom_left" value="bottom-left">
+                </td>
+                <td>
+                    <label for="trian_bottom">bottom</label>
+                    <input type="radio" name="triangle" id="trian_bottom" value="bottom">
+                </td>
+                <td>
+                    <label for="trian_bottom_right">bottom-right</label>
+                    <input type="radio" name="triangle" id="trian_bottom_right" value="bottom-right">
+                </td>
+            </tr>
+        </table>
+        
+        
+        <h3>Результат</h3>
+        
+        <textarea class="trian-css-result" readonly></textarea>
+      </form>
+      </div>
+      <script src="dark.js"></script>
+      <script src="main.js"></script>
+</body>
+</html>
